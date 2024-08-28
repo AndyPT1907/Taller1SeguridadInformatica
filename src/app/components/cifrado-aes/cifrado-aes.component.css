@@ -1,72 +1,104 @@
+/* Estilo general para centrar contenido */
 .container {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-  }
-  
-  .title {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .input {
-    width: calc(100% - 22px);
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .button-group {
-    margin-bottom: 20px;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 16px;
-    margin: 5px;
-  }
-  
-  .encrypt {
-    background-color: #28a745;
-  }
-  
-  .decrypt {
-    background-color: #dc3545;
-  }
-  
-  .result-group {
-    margin-bottom: 20px;
-  }
-  
-  .result-title {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+}
+
+/* Título principal */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #ffdf00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Secciones de cifrado y descifrado */
+.section {
+  margin-bottom: 40px;
+}
+
+/* Título de cada sección */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffdf00;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de los input de archivos */
+.file-input {
+  padding: 12px;
+  border: 2px solid #ffdf00;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffdf00;
+  transition: all 0.3s ease;
+}
+
+/* Estilo de los labels */
+.label {
+  font-size: 16px;
+  color: #ffdf00;
+  margin-right: 10px;
+}
+
+/* Estilo de los campos de texto */
+.input {
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #ffdf00;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffdf00;
+  transition: all 0.3s ease;
+}
+
+/* Estilo de los botones */
+.button {
+  padding: 12px 30px;
+  background-color: #ffdf00;
+  color: #6a11cb;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover para los botones */
+.button:hover {
+  background-color: #fff;
+  color: #6a11cb;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto activo (click) para los botones */
+.button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el separador horizontal */
+.divider {
+  border: 0;
+  height: 2px;
+  background: #ffdf00;
+  margin: 40px 0;
+  opacity: 0.8;
+  border-radius: 5px;
+}

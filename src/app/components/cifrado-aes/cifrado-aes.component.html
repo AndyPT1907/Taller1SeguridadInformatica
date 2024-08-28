@@ -1,29 +1,25 @@
 <div class="container">
-    <h1 class="title">Cifrado Simétrico</h1>
-  
-    <div class="input-group">
-      <label for="text">Texto:</label>
-      <textarea id="text" [(ngModel)]="text" rows="4" cols="50" class="textarea"></textarea>
-    </div>
-  
-    <div class="input-group">
-      <label for="key">Clave:</label>
-      <input id="key" [(ngModel)]="key" type="text" class="input"/>
-    </div>
-  
-    <div class="button-group">
-      <button (click)="encryptText()" class="button encrypt">Cifrar</button>
-      <button (click)="decryptText()" class="button decrypt">Descifrar</button>
-    </div>
-  
-    <div class="result-group">
-      <h3 class="result-title">Texto Cifrado:</h3>
-      <textarea [value]="encryptedText" rows="4" cols="50" class="textarea" readonly></textarea>
-    </div>
-  
-    <div class="result-group">
-      <h3 class="result-title">Texto Descifrado:</h3>
-      <textarea [value]="decryptedText" rows="4" cols="50" class="textarea" readonly></textarea>
-    </div>
+  <h1 class="title">Cifrado de Archivos con AES</h1>
+
+  <div class="section">
+    <h3 class="section-title">Subir Archivo para Cifrar</h3>
+    <input type="file" class="file-input" (change)="onFileSelected($event, 'encrypt')" />
+    <br />
+    <label for="encrypt-key" class="label">Clave:</label>
+    <input id="encrypt-key" [(ngModel)]="key" type="text" class="input"/>
+    <br />
+    <button class="button" (click)="encryptFile()">Cifrar y Descargar</button>
   </div>
-  
+
+  <hr class="divider"/>
+
+  <div class="section">
+    <h3 class="section-title">Subir Archivo para Descifrar</h3>
+    <input type="file" class="file-input" (change)="onFileSelected($event, 'decrypt')" />
+    <br />
+    <label for="decrypt-key" class="label">Clave:</label>
+    <input id="decrypt-key" [(ngModel)]="key" type="text" class="input"/>
+    <br />
+    <button class="button" (click)="decryptFile()">Descifrar y Descargar</button>
+  </div>
+</div>
