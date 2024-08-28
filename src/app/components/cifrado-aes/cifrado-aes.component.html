@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="title">Cifrado Simétrico</h1>
+  
+    <div class="input-group">
+      <label for="text">Texto:</label>
+      <textarea id="text" [(ngModel)]="text" rows="4" cols="50" class="textarea"></textarea>
+    </div>
+  
+    <div class="input-group">
+      <label for="key">Clave:</label>
+      <input id="key" [(ngModel)]="key" type="text" class="input"/>
+    </div>
+  
+    <div class="button-group">
+      <button (click)="encryptText()" class="button encrypt">Cifrar</button>
+      <button (click)="decryptText()" class="button decrypt">Descifrar</button>
+    </div>
+  
+    <div class="result-group">
+      <h3 class="result-title">Texto Cifrado:</h3>
+      <textarea [value]="encryptedText" rows="4" cols="50" class="textarea" readonly></textarea>
+    </div>
+  
+    <div class="result-group">
+      <h3 class="result-title">Texto Descifrado:</h3>
+      <textarea [value]="decryptedText" rows="4" cols="50" class="textarea" readonly></textarea>
+    </div>
+  </div>
+  
